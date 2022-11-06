@@ -3,8 +3,9 @@ A 4 MB memory expansion for the Apple Macintosh Portable.
 
 ## In this repo
 You will find several items, but most importantly there is:
-* A Logisim .circ file that describes the address decoding and chip select logic
-* A KiCad project folder with the schematics and PCB
+* a Logisim .circ file that describes the address decoding and chip select logic
+* a KiCad project folder with the schematics and PCB
+* the original schematic for the Portable
 
 ## Logisim
 As mentioned, this file describes the address decoding and chip select logic. It is relatively simple, but I'll try to explain it here too.
