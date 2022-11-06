@@ -32,5 +32,6 @@ The PCB itself is designed in 4 layers and is based off of the HCT-series of chi
 The HCT-series are chosen, because the mainboard on the portable uses the old TTL logic. The memory module uses more "modern" SRAM chips that probably won't work very well with those levels. That means CMOS levels for the output, but TTL levels for the input. That automatically puts you in the HCT-series.
 
 ## Closing words
-Since I have absolutely no experience in schematic and PCB design, there will probably be some errors and "donts". If you happen to find them, please let me know so I can adapt the design accordingly.
+Since I have absolutely no experience in schematic and PCB design, there will probably be some errors and "donts". If you happen to find them, please let me know so I can adapt the design accordingly. There has only been a set of PCBs manufactured for fitting purposes. No working board exists today, so use without examination is at your own risk.
+
 No need to get my permission for personal or commercial use. Feel free to do with this project in any way you see fit. However, I'd appreciate this source being mentioned in some capacity and receive a small message when you base a product off of these files. Just to know how the project is being used :)
