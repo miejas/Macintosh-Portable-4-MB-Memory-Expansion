@@ -1,0 +1,181 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid bf615eed-1fa2-427b-b484-a0a1d10ce197)
+
+  (paper "A4")
+
+  (title_block
+    (title "Overview")
+    (date "2022-10-20")
+    (rev "0.1")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "Pg.     Description\n=====================\n1       Overview (this page)\n2       Edge Connector\n3       Select Logic\n4       Address and Data Buffer\n5       Static RAM"
+    (at 31.75 95.25 0)
+    (effects (font (size 4 4)) (justify left bottom))
+    (uuid 08b5a9ec-11f3-4402-a6bf-9a18ad313016)
+  )
+  (text "Macintosh Portable 4MB Memory Expansion" (at 19.05 27.94 0)
+    (effects (font (size 6 6) (thickness 1.2) bold) (justify left bottom))
+    (uuid e5cba946-4c42-415a-a51a-2976d2e91b45)
+  )
+
+  (sheet (at 134.62 77.47) (size 26.67 3.81)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 07e3ca4e-1e46-42ec-b5e1-6b79effa373d)
+    (property "Sheet name" "Select Logic" (id 0) (at 135.89 80.01 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "select-logic.kicad_sch" (id 1) (at 134.62 81.8646 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+  )
+
+  (sheet (at 134.62 71.12) (size 26.67 3.81)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 86b3ff6e-ea50-4770-a8de-2c05395ee9e8)
+    (property "Sheet name" "Edge Connector" (id 0) (at 135.89 73.66 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "edge-connector.kicad_sch" (id 1) (at 134.62 75.5146 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+  )
+
+  (sheet (at 134.62 83.82) (size 26.67 3.81)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid d2071bc6-b866-41fd-8d0a-20c7dfe7ae87)
+    (property "Sheet name" "Address and Data Buffer" (id 0) (at 135.89 86.36 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "buffers.kicad_sch" (id 1) (at 134.62 88.2146 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+  )
+
+  (sheet (at 134.62 90.17) (size 26.67 3.81)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid e7bacd53-fc88-439e-9500-48aca93f2cbe)
+    (property "Sheet name" "Static RAM" (id 0) (at 135.89 92.71 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "sram.kicad_sch" (id 1) (at 134.62 94.5646 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8" (page "2"))
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d" (page "3"))
+    (path "/d2071bc6-b866-41fd-8d0a-20c7dfe7ae87" (page "4"))
+    (path "/e7bacd53-fc88-439e-9500-48aca93f2cbe" (page "5"))
+  )
+
+  (symbol_instances
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/1d53392f-d06f-4681-b59d-cc99b048c167"
+      (reference "#FLG0101") (unit 1) (value "PWR_FLAG") (footprint "")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/c33f8ad1-1be6-46ac-be5f-f72fec6be50d"
+      (reference "#FLG0102") (unit 1) (value "PWR_FLAG") (footprint "")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/6a362b40-1c09-4565-bf27-972f0e12878c"
+      (reference "#PWR0101") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/47a1c426-d467-4e51-9b8b-88c6baf523c3"
+      (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/afdfb5db-6d2d-4205-9f06-c0c637d7fa8f"
+      (reference "C1") (unit 1) (value "10µF") (footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/bc65e65b-6fb4-4d3f-adb9-20578248bfc0"
+      (reference "J1") (unit 1) (value "Conn_02x25_Odd_Even") (footprint "Connector_Samtec:Samtec_BCS-125-F-D-HE")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/acbec25d-0a5d-42a6-8b2e-ef98f3d3ecf6"
+      (reference "R1") (unit 1) (value "4.7kΩ") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/86b3ff6e-ea50-4770-a8de-2c05395ee9e8/7714a8dd-7866-4782-bc9b-c231c3e81b11"
+      (reference "R2") (unit 1) (value "4,7kΩ") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/6aba1c9c-1e8c-4c20-929a-3913741ea43f"
+      (reference "U1") (unit 1) (value "74LS138") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/7da372c9-2ee7-4c3f-bc90-04e3e4be7bb3"
+      (reference "U2") (unit 1) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/70a111e1-31be-439a-b03f-33fcb3c79e41"
+      (reference "U2") (unit 2) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/e99ed5ef-8412-4f96-a986-cdcdb35e93fa"
+      (reference "U2") (unit 3) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/25a970db-c162-434e-a194-fbefa032a69b"
+      (reference "U2") (unit 4) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/9a620448-c149-48dd-a654-7e7c18f590b8"
+      (reference "U2") (unit 5) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/d1a3a429-999c-43f4-b340-1e77e7be2cc4"
+      (reference "U3") (unit 2) (value "74LS00") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/be93adaa-9f9d-4774-872f-c550adb4baca"
+      (reference "U3") (unit 3) (value "74LS00") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/f2d8c68d-87a3-4048-bb1c-a827a64bccd6"
+      (reference "U3") (unit 4) (value "74LS00") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/a9ecb2ba-fc23-4374-b59c-e3c923d6db57"
+      (reference "U3") (unit 5) (value "74LS00") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/0a7a7463-5914-4e37-ba9b-3d11abadc690"
+      (reference "U4") (unit 1) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/6aae42f1-7ef4-4b1c-a004-8a7a20859709"
+      (reference "U4") (unit 2) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/ffeb34a5-c73e-4ca0-aca0-59e2cf8a93b6"
+      (reference "U4") (unit 3) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/44a5a451-a2b4-4e93-8cd0-43fb740f7fd7"
+      (reference "U4") (unit 4) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/07e3ca4e-1e46-42ec-b5e1-6b79effa373d/c4aeaba7-d729-404e-8a64-633b9e43cb62"
+      (reference "U4") (unit 5) (value "74LS02") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/d2071bc6-b866-41fd-8d0a-20c7dfe7ae87/a90a80c0-a802-4fac-b679-2505aa8f426d"
+      (reference "U5") (unit 1) (value "74HC245") (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+    )
+    (path "/d2071bc6-b866-41fd-8d0a-20c7dfe7ae87/b8d3e25b-04f9-46c2-9ccd-bbf76c7f93e5"
+      (reference "U6") (unit 1) (value "74HC245") (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+    )
+    (path "/d2071bc6-b866-41fd-8d0a-20c7dfe7ae87/99538dea-ea94-4229-b94a-716333d03c5c"
+      (reference "U7") (unit 1) (value "74HC245") (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+    )
+    (path "/d2071bc6-b866-41fd-8d0a-20c7dfe7ae87/d125c249-ff70-45bc-8749-d7b22ef74317"
+      (reference "U8") (unit 1) (value "74HC245") (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+    )
+    (path "/d2071bc6-b866-41fd-8d0a-20c7dfe7ae87/005f6416-e732-4f69-9078-31bd99497267"
+      (reference "U9") (unit 1) (value "74HC245") (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+    )
+    (path "/e7bacd53-fc88-439e-9500-48aca93f2cbe/1bbef17b-35aa-4cd4-9433-bcc039d46e35"
+      (reference "U10") (unit 1) (value "AS6C8008") (footprint "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm")
+    )
+    (path "/e7bacd53-fc88-439e-9500-48aca93f2cbe/a249a1f0-b5df-482d-ad93-7990d02b9d3a"
+      (reference "U11") (unit 1) (value "AS6C8008") (footprint "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm")
+    )
+    (path "/e7bacd53-fc88-439e-9500-48aca93f2cbe/7258c200-c8f6-4792-844d-b7a2f4959f99"
+      (reference "U12") (unit 1) (value "AS6C8008") (footprint "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm")
+    )
+    (path "/e7bacd53-fc88-439e-9500-48aca93f2cbe/904599f8-c4ae-46fb-a025-150f63020e01"
+      (reference "U13") (unit 1) (value "AS6C8008") (footprint "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm")
+    )
+  )
+)
