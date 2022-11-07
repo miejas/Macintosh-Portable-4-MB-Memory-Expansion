@@ -22,12 +22,12 @@ Address lines A0 to A20 go directly to the SRAM, as well as the data lines.
 ## KiCad
 Again, a relatively simple schematic. It is divided into 4 hierachical pages according to the different functions of the module. A warning when reading the decoding logic: KiCad (on my PC at least) does not have OR gates, but since they come in the same package as NOT gates, I've selected those in stead. But I'm really using OR gates, so the Logisim file is leading.
 
-The PCB itself is designed in 4 layers and is based off of the HCT-series of chips, although KiCad probably mentions otherwise in some cases. I might change that in the future. In fact, these are the chips that were selected so far:
+The PCB itself is designed in 4 layers with each layer having a plane (V_REF, GND, VCC and GND again) and many, many vias. The input/output handling is based off of the HCT-series of chips, although KiCad probably mentions otherwise in some cases. I might change that in the future. In fact, these are the chips that were selected so far:
 * 74HCT00 (quad NAND gate)
 * 74HCT32 (quad OR gate)
 * 74HCT138 (decoder)
 * 74HCT245 (address and data buffers) - the 74HCT244 might also work for the address buffers (warning: some manufactures make this an inverting version of the 245 and some a one-way version of the 245. Check the data sheets!)
-* AS6C8008 (SRAM) - by Allied Semiconductor, but chips by ISSI, Cypress of Lyontek should work as well (check the data sheets!) 
+* AS6C8008 (SRAM) - by Allied Semiconductor, but chips by ISSI, Cypress of Lyontek should work as well. The most import parameters are an access time of 55ns or less, a 1M x 8bit (address x data) layout and 5 V input voltage.
 
 The HCT-series are chosen, because the mainboard on the portable uses the old TTL logic. The memory module uses more "modern" SRAM chips that probably won't work very well with those levels. That means CMOS levels for the output, but TTL levels for the input. That automatically puts you in the HCT-series.
 
