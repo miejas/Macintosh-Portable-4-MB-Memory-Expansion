@@ -10,14 +10,14 @@ You will find several items, but most importantly there is:
 ## Logisim
 As mentioned, this file describes the address decoding and chip select logic. It is relatively simple, but I'll try to explain it here too.
 
-The memory module shares address space with the 1 MB onboard memory. That memory uses the first 20 bits of the address (A0 to A19). So "our" memory must not drive the bus, unless A20 or A21 as active. And since the memory module is limited to 4 MB (or 22 bits of address space), it should NOT drive the bus when A22 of A23 are active (since that could be used by something else). This decision process is linked to the nRAM_ENA line (RAM_ENABLE* in the KiCad project). This line also disables much of the chips on the PCB.
+The memory module shares address space with the 1 MB onboard memory. That memory uses the first 19 bits of the address space (A1 to A19). So "our" memory must not drive the bus, unless A20 or A21 as active. And since the memory module is limited to 4 MB (or 22 bits of address space), it should NOT drive the bus when A22 of A23 are active (since that could be used by something else). This decision process is linked to the nRAM_ENA line (RAM_ENABLE* in the KiCad project). This line also disables much of the chips on the PCB.
 
 The chip selection and mode (read or write) process is driven by four values:
 * A21: selects the chip colum (U10+U11 or U12+U13)
 * nLDS and nUDS: select the chip bank (U10+U12 or U11+U13 or both) to output either 8 bits or 16 bits of data
 * RW: toggles the OE or WE pins on all the chips at once
 
-Address lines A0 to A20 go directly to the SRAM, as well as the data lines.
+Address lines A1 to A20 go directly to the SRAM, as well as the data lines.
 
 ## KiCad
 Again, a relatively simple schematic. It is divided into 4 hierachical pages according to the different functions of the module. A warning when reading the decoding logic: KiCad (on my PC at least) does not have OR gates, but since they come in the same package as NOT gates, I've selected those in stead. But I'm really using OR gates, so the Logisim file is leading.
@@ -35,3 +35,5 @@ The HCT-series are chosen, because the mainboard on the portable uses the old TT
 Since I have absolutely no experience in schematic and PCB design, there will probably be some errors and "donts". If you happen to find them, please let me know so I can adapt the design accordingly. There has only been a set of PCBs manufactured for fitting purposes. No working board exists today, so use without examination is at your own risk.
 
 No need to get my permission for personal or commercial use. Feel free to do with this project in any way you see fit. However, I'd appreciate this source being mentioned in some capacity and receive a small message when you base a product off of these files. Just to know how the project is being used :)
+
+For discussion regarding issues or concerns or comment or .... please visit the discussion section.
