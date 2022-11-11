@@ -12,6 +12,8 @@ As mentioned, this file describes the address decoding and chip select logic. It
 
 The memory module shares address space with the 1 MB onboard memory. That memory uses the first 19 bits of the address space (A1 to A19). So "our" memory must not drive the bus, unless A20 and/or A21 are active. And since the memory module is limited to 4 MB (or 22 bits of address space), it should NOT drive the bus when A22 and/or A23 are active (since that could be used by something else). This decision process is linked to the nRAM_ENA line (RAM_ENABLE* in the KiCad project). This line also disables much of the chips on the PCB.
 
+Please note that there is actually only 21 bits of address space used for 4 MB. You'd think that would only result in 2 MB of addressable memory, but that is where LDS and UDS come into play. Each of those signals enables or disables an 8 bit slice of memory. In effect, this kind of adds an extra bit of address space, hence the full 4 MB.
+
 The chip selection and mode (read or write) process is driven by four values:
 * A21: selects the chip colum (U10+U11 or U12+U13)
 * nLDS and nUDS: select the chip bank (U10+U12 or U11+U13 or both) to output either 8 bits or 16 bits of data
