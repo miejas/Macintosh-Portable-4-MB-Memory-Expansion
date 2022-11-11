@@ -10,7 +10,7 @@ You will find several items, but most importantly there is:
 ## Logisim
 As mentioned, this file describes the address decoding and chip select logic. It is relatively simple, but I'll try to explain it here too.
 
-The memory module shares address space with the 1 MB onboard memory. That memory uses the first 19 bits of the address space (A1 to A19). So "our" memory must not drive the bus, unless A20 or A21 as active. And since the memory module is limited to 4 MB (or 22 bits of address space), it should NOT drive the bus when A22 of A23 are active (since that could be used by something else). This decision process is linked to the nRAM_ENA line (RAM_ENABLE* in the KiCad project). This line also disables much of the chips on the PCB.
+The memory module shares address space with the 1 MB onboard memory. That memory uses the first 19 bits of the address space (A1 to A19). So "our" memory must not drive the bus, unless A20 and/or A21 are active. And since the memory module is limited to 4 MB (or 22 bits of address space), it should NOT drive the bus when A22 and/or A23 are active (since that could be used by something else). This decision process is linked to the nRAM_ENA line (RAM_ENABLE* in the KiCad project). This line also disables much of the chips on the PCB.
 
 The chip selection and mode (read or write) process is driven by four values:
 * A21: selects the chip colum (U10+U11 or U12+U13)
