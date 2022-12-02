@@ -6,6 +6,7 @@ You will find several items, but most importantly there is:
 * a Logisim .circ file that describes the address decoding and chip select logic
 * a KiCad project folder with the schematics and PCB
 * the original schematic for the Portable
+* details about the revisions
 
 ## Logisim
 As mentioned, this file describes the address decoding and chip select logic. It is relatively simple, but I'll try to explain it here too.
@@ -25,7 +26,7 @@ Address lines A1 to A20 go directly to the SRAM, as well as the data lines.
 Again, a relatively simple schematic. It is divided into 4 hierachical pages according to the different functions of the module. A warning when reading the decoding logic: KiCad (on my PC at least) does not have OR gates, but since they come in the same package as NOT gates, I've selected those in stead. But I'm really using OR gates, so the Logisim file is leading.
 
 The PCB itself is designed in 4 layers with each layer having a plane (V_REF, GND, VCC and GND again) and many, many vias. The input/output handling is based off of the HCT-series of chips, although KiCad probably mentions otherwise in some cases. I might change that in the future. In fact, these are the chips that were selected so far:
-* 74HCT00 (quad NAND gate)
+* 74HCT132 (quad NAND gate)
 * 74HCT32 (quad OR gate)
 * 74HCT138 (decoder)
 * 74HCT245 (address and data buffers) - the 74HCT244 might also work for the address buffers (warning: some manufactures make this an inverting version of the 245 and some a one-way version of the 245. Check the data sheets!)
@@ -33,9 +34,12 @@ The PCB itself is designed in 4 layers with each layer having a plane (V_REF, GN
 
 The HCT-series are chosen, because the mainboard on the portable uses the old TTL logic. The memory module uses more "modern" SRAM chips that probably won't work very well with those levels. That means CMOS levels for the output, but TTL levels for the input. That automatically puts you in the HCT-series.
 
+## Revisions
+2 December 2022: there is a race condition between the address buffer chips and the "ram enable" logic. There is no board update yet, but a work-around is to tie pin 19 of chip U7 to gnd_ref (or ground). 
+
 ## Closing words
-Since I have absolutely no experience in schematic and PCB design, there will probably be some errors and "donts". If you happen to find them, please let me know so I can adapt the design accordingly. There has only been a set of PCBs manufactured for fitting purposes. No working board exists today, so use without examination is at your own risk.
+Since I have absolutely no experience in schematic and PCB design, there will probably be some errors and "donts". If you happen to find them, please let me know so I can adapt the design accordingly. Although I am getting closer, no working board exists today. Use without thorough examination is at your own risk!
 
 No need to get my permission for personal or commercial use. Feel free to do with this project in any way you see fit. However, I'd appreciate this source being mentioned in some capacity and receive a small message when you base a product off of these files. Just to know how the project is being used :)
 
-For discussion regarding issues or concerns or comment or .... please visit the discussion section.
+For discussion regarding issues or concerns or comment or .... please use the discussion section.
