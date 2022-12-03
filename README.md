@@ -30,12 +30,14 @@ The PCB itself is designed in 4 layers with each layer having a plane (V_REF, GN
 * 74HCT32 (quad OR gate)
 * 74HCT138 (decoder)
 * 74HCT245 (address and data buffers) - the 74HCT244 might also work for the address buffers (warning: some manufactures make this an inverting version of the 245 and some a one-way version of the 245. Check the data sheets!)
-* AS6C8008 (SRAM) - by Allied Semiconductor, but chips by ISSI, Cypress of Lyontek should work as well. The most import parameters are an access time of 55ns or less, a 1M x 8bit (address x data) layout and 5 V input voltage.
+* AS6C8008 (SRAM) - by Allied Semiconductor, but chips by ISSI, Cypress, Lyontek,... should work as well. The most import parameters are an access time of 55ns or less, a 1M x 8bit (address x data) layout and 5 V input voltage.
 
 The HCT-series are chosen, because the mainboard on the portable uses the old TTL logic. The memory module uses more "modern" SRAM chips that probably won't work very well with those levels. That means CMOS levels for the output, but TTL levels for the input. That automatically puts you in the HCT-series.
 
 ## Revisions
-2 December 2022: there is a race condition between the address buffer chips and the "ram enable" logic. There is no board update yet, but a work-around is to tie pin 19 of chip U7 to gnd_ref (or ground). 
+__Rev. A__
+* There is a race condition between the address buffer chips and the "ram enable" logic. A workaround is to tie pin 19 of chip U7 to gnd_ref (or ground). This will be fixed in board rev. B.
+* A20 and A23 on the buffer chip only seem to go high when another ADDR-input on that chip is high. When A20 or A23 are the only one, they seem to hover around 1.2V instead of Vcc. No root cause found yet.
 
 ## Closing words
 Since I have absolutely no experience in schematic and PCB design, there will probably be some errors and "donts". If you happen to find them, please let me know so I can adapt the design accordingly. Although I am getting closer, no working board exists today. Use without thorough examination is at your own risk!
